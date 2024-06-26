@@ -1,0 +1,42 @@
+@model List<TypeFinition>
+<div class="col-lg-12">
+    <div class="card">
+        <div class="card-header">
+            <h4 class="card-title">Liste des finitions</h4>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-responsive-md">
+                    <thead>
+                        <tr>
+                            <th><strong>NO.</strong></th>
+                            <th><strong>NOM</strong></th>
+                            <th><strong>POURCENTAGE</strong></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td><strong>@item.Id</strong></td>
+                                <td>
+                                    <div class="d-flex align-items-center"><img src="images/avatar/1.jpg"
+                                            class="rounded-lg me-2" width="24" alt="" /> <span
+                                            class="w-space-no">@item.Nom</span></div>
+                                </td>
+                                <td>@item.Pourcentage %</td>
+                                <td>
+                                    <div class="d-flex">
+                                        <a href="@Url.Action("UpdateForm", "Finition", new{ idTypeFinition = item.Id })"
+                                            class="btn btn-primary shadow btn-xs sharp me-1"><i
+                                                class="fas fa-pencil-alt"></i></a>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

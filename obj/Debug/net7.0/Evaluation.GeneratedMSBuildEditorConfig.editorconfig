@@ -1,0 +1,113 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Evaluation
+build_property.RootNamespace = Evaluation
+build_property.ProjectDir = c:\Users\ASUS\Documents\.NET Projects\Evaluation\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = c:\Users\ASUS\Documents\.NET Projects\Evaluation
+build_property._RazorSourceGeneratorDebug = 
+
+[c:/Users/ASUS/Documents/.NET Projects/Evaluation/Views/Dashboard/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/ASUS/Documents/.NET Projects/Evaluation/Views/DevisAdmin/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGV2aXNBZG1pblxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/ASUS/Documents/.NET Projects/Evaluation/Views/DevisAdmin/Liste.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGV2aXNBZG1pblxMaXN0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/ASUS/Documents/.NET Projects/Evaluation/Views/DevisUser/CreateForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGV2aXNVc2VyXENyZWF0ZUZvcm0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/ASUS/Documents/.NET Projects/Evaluation/Views/DevisUser/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGV2aXNVc2VyXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/ASUS/Documents/.NET Projects/Evaluation/Views/DevisUser/Liste.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGV2aXNVc2VyXExpc3RlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/ASUS/Documents/.NET Projects/Evaluation/Views/Error/Forbidden.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXJyb3JcRm9yYmlkZGVuLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/ASUS/Documents/.NET Projects/Evaluation/Views/Finition/Liste.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmluaXRpb25cTGlzdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/ASUS/Documents/.NET Projects/Evaluation/Views/Finition/UpdateForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmluaXRpb25cVXBkYXRlRm9ybS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/ASUS/Documents/.NET Projects/Evaluation/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/ASUS/Documents/.NET Projects/Evaluation/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/ASUS/Documents/.NET Projects/Evaluation/Views/Import/Donnees.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW1wb3J0XERvbm5lZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/ASUS/Documents/.NET Projects/Evaluation/Views/Import/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW1wb3J0XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/ASUS/Documents/.NET Projects/Evaluation/Views/Import/Paiement.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW1wb3J0XFBhaWVtZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/ASUS/Documents/.NET Projects/Evaluation/Views/Login/LoginAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cTG9naW5BZG1pbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/ASUS/Documents/.NET Projects/Evaluation/Views/Login/LoginUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cTG9naW5Vc2VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/ASUS/Documents/.NET Projects/Evaluation/Views/Paiement/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFpZW1lbnRcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/ASUS/Documents/.NET Projects/Evaluation/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/ASUS/Documents/.NET Projects/Evaluation/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/ASUS/Documents/.NET Projects/Evaluation/Views/Travaux/Liste.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhdmF1eFxMaXN0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/ASUS/Documents/.NET Projects/Evaluation/Views/Travaux/UpdateForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhdmF1eFxVcGRhdGVGb3JtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/ASUS/Documents/.NET Projects/Evaluation/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/ASUS/Documents/.NET Projects/Evaluation/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/ASUS/Documents/.NET Projects/Evaluation/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-1mnt8h0fol

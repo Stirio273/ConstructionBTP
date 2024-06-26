@@ -1,0 +1,45 @@
+@model List<TypeTravaux>
+@{
+    int count = ViewBag.devisCount;
+}
+<div class="col-lg-12">
+    <div class="card">
+        <div class="card-header">
+            <h4 class="card-title">Liste des travaux</h4>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered verticle-middle table-responsive-sm">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Designation</th>
+                            <th>Unite</th>
+                            <th>Prix Unitaire</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <th>@item.Numero</th>
+                                <td>@item.Designation</td>
+                                <td>@item.Unite.Nom</td>
+                                <td>@item.ShowPrixUnitaire()</td>
+                                <td>
+                                    <span>
+                                        <a href="@Url.Action("UpdateForm", "Travaux", new{idTypeTravaux = item.Id})"
+                                            class="me-4" data-bs-toggle="tooltip" data-placement="top" title="Edit"><i
+                                                class="fas fa-pencil-alt color-muted"></i>
+                                        </a>
+                                    </span>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

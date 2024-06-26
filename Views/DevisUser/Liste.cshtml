@@ -1,0 +1,98 @@
+@model List<Devis>
+@{
+    int count = ViewBag.devisCount;
+}
+@* <head>
+<!-- Datatable -->
+<link href="~/vendor/datatables/css/jquery.dataTables.min.css" rel="stylesheet">
+</head> *@
+<div class="col-lg-12">
+    <div class="card" id="pageprint">
+        <div class="card-header">
+            <h4 class="card-title">Mes devis</h4>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-responsive-md">
+                    <thead>
+                        <tr>
+                            <th class="width80"><strong>NUMERO</strong></th>
+                            <th><strong>TYPE DE MAISON</strong></th>
+                            <th>
+                                <strong>TYPE DE FINITION</strong>
+                            </th>
+                            <th><strong>DATE DE DEBUT</strong></th>
+                            <th><strong>DATE DE FIN</strong></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @for (int i = 0; i < Model.Count; i++)
+                        {
+                            <tr>
+                                <td><strong>@Model[i].Numero</strong></td>
+                                <td>@Model[i].TypeMaison.Nom</td>
+                                <td>@Model[i].TypeFinition.Nom</td>
+                                <td>@Model[i].DateDebut</td>
+                                <td>@Model[i].GetDateFin()</td>
+                                <td>
+                                    <div class="dropdown">
+                                        <button type="button" class="btn btn-warning light sharp" data-bs-toggle="dropdown">
+                                            <svg width="20px" height="20px" viewBox="0 0 24 24" version="1.1">
+                                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                    <rect x="0" y="0" width="24" height="24" />
+                                                    <circle fill="#000000" cx="5" cy="12" r="2" />
+                                                    <circle fill="#000000" cx="12" cy="12" r="2" />
+                                                    <circle fill="#000000" cx="19" cy="12" r="2" />
+                                                </g>
+                                            </svg>
+                                        </button>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item"
+                                                href="@Url.Action("Details", "DevisUser", new{numero = Model[i].Numero, idTypeMaison = Model[i].IdTypeMaison, id = Model[i].Id})">Voir
+                                                les details</a>
+                                            <a class="dropdown-item"
+                                                href="@Url.Action("Index", "Paiement", new{id = Model[i].Id})">Payer</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                <nav>
+                    <ul class="pagination pagination-gutter">
+                        <li class="page-item page-indicator">
+                            <a class="page-link" href="javascript:void(0)">
+                                <i class="la la-angle-left"></i></a>
+                        </li>
+                        @for (int i = 0; i < Math.Ceiling((double)count / Constants.NUMBER_OF_ITEMS_PER_PAGE); i++)
+                        {
+                            <li class="page-item"><a class="page-link"
+                                    href="@Url.Action("Liste", "DevisUser", new { offset = (i * Constants.NUMBER_OF_ITEMS_PER_PAGE)})">@(i
+                                + 1)</a>
+                            </li>
+                        }
+                        @* <li class="page-item active"><a class="page-link"
+                        href="@Url.Action("Index", "Film", new { offset = 0 })">1</a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="javascript:void(0)">2</a></li>
+                        <li class="page-item"><a class="page-link" href="javascript:void(0)">3</a></li>
+                        <li class="page-item"><a class="page-link" href="javascript:void(0)">4</a></li> *@
+                        <li class="page-item page-indicator">
+                            <a class="page-link" href="javascript:void(0)">
+                                <i class="la la-angle-right"></i></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+@* @section Scripts {
+<!-- Datatable -->
+<script src="~/vendor/datatables/js/jquery.dataTables.min.js"></script>
+<script src="~/js/plugins-init/datatables.init.js"></script>
+} *@
+
+

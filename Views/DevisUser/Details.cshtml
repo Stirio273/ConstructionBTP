@@ -1,0 +1,99 @@
+@model List<TravauxDevis>
+@{
+    Devis devis = ViewBag.devis;
+    List<Paiement> paiements = ViewBag.paiements;
+}
+<div id="pdf">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h4 class="card-title">Devis @devis.Numero</h4>
+                <button onclick="downloadCode()" id="boutonExport" class="btn btn-primary">Export PDF</button>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <p><strong>Type de maison : </strong>@devis.TypeMaison.Nom</p>
+                    <p><strong>Duree de construction : </strong>@devis.TypeMaison.DureeDeConstruction jours</p>
+                    <p><strong>Type de finition : </strong>@devis.TypeFinition.Nom</p>
+                    <p><strong>Taux de finition : </strong>@devis.TypeFinition.Pourcentage %</p>
+                    <p><strong>Date de debut : </strong>@devis.DateDebut</p>
+                    <p><strong>Date de fin : </strong>@devis.GetDateFin()</p>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-bordered table-responsive-sm">
+                        <legend>Liste des travaux</legend>
+                        <thead>
+                            <tr>
+                                <th>N°</th>
+                                <th>DESIGNATIONS</th>
+                                <th>U</th>
+                                <th>Q</th>
+                                <th>PU</th>
+                                <th>TOTAL</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@item.TypeTravaux.Numero</td>
+                                    <td>@item.TypeTravaux.Designation</td>
+                                    <td>@item.TypeTravaux.Unite.Nom</td>
+                                    <td>@item.Quantite</td>
+                                    <td>@Formatter.FormatDouble(item.PrixUnitaire) Ar</td>
+                                    <td>@Formatter.FormatDouble(item.Total) Ar</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                    <h5><b>Total travaux : </b>@(Formatter.FormatDouble(Model.Sum(m => m.Total))) Ar</h5>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-bordered table-responsive-sm">
+                        <legend>Liste des paiements</legend>
+                        <thead>
+                            <tr>
+                                <th>REF PAIEMENT</th>
+                                <th>DATE</th>
+                                <th>MONTANT</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in paiements)
+                            {
+                                <tr>
+                                    <td>@item.Ref_paiement</td>
+                                    <td>@item.Date</td>
+                                    <td>@(Formatter.FormatDouble(item.Montant)) Ar</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                    <h5><b>Total paiements : </b>@(Formatter.FormatDouble(paiements.Sum(p => p.Montant))) Ar</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script>
+        function generatePDF() {
+            const element = document.getElementById("pdf");
+            document.getElementById("boutonExport").style.display = 'None';
+            html2pdf().from(element).set({
+                margin: [20, 0, 0, 0],
+                filename: 'your_filename.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2 },
+                pagebreak: { mode: 'avoid-all' },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            }).save('download.pdf');
+        }
+
+        function downloadCode() {
+            generatePDF();
+            setTimeout(function () { window.location = window.location; }, 3000);
+        }
+    </script>
+}

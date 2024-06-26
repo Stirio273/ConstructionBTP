@@ -1,0 +1,61 @@
+@{
+    List<Unite> unites = ViewBag.unites;
+}
+@model TypeTravaux
+<div class="col-xl-10 col-lg-12">
+    <div class="card">
+        <div class="card-header">
+            <h4 class="card-title">Modification de type de travaux</h4>
+        </div>
+        <div class="card-body">
+            <div class="basic-form">
+                <form asp-action="Update" asp-controller="Travaux" method="post">
+                    @Html.ValidationSummary(true)
+                    <input type="hidden" name="id" value="@Model.Id">
+                    <div class="mb-3 row">
+                        <label class="col-sm-2 col-form-label">Numero:</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" name="numero" value="@Model.Numero">
+                        </div>
+                        <div class="col-sm-2">
+                            @Html.ValidationMessageFor(model => model.Numero, "", new{@style = "color:red;"})
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label class="col-sm-2 col-form-label">Designation:</label>
+                        <div class="col-sm-6"><textarea class="form-control" rows="7" id="comment"
+                                name="designation">@Model.Designation</textarea></div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label class="col-sm-2 col-form-label">Unite:</label>
+                        @* <select class="default-select form-control col-sm-9">
+                        @foreach (var item in categories)
+                        {
+                        <option value="@item.Id">@item.Nom</option>
+                        }
+                        </select> *@
+                        <div class="col-sm-6">
+                            @Html.DropDownListFor(model => model.IdUnite, new SelectList(unites, "Id", "Nom"),
+                            "Choisir une unite", new{@class = "default-select form-control"})
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label class="col-sm-2 col-form-label">Prix unitaire:</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" name="prixUnitaire"
+                                value="@Model.PrixUnitaire.ToString()" step="0.001">
+                        </div>
+                        <div class="col-sm-2">
+                            @Html.ValidationMessageFor(model => model.PrixUnitaire, "", new{@style = "color:red;"})
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <div class="col-sm-10">
+                            <button type="submit" class="btn btn-primary">Valider</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
